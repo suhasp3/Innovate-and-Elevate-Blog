@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Innovate & Elevate</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand playwrite-be-vlg-cursive me-auto" href="/"
+          >Innovate & Elevate</a
+        >
+
+        <a href="/new" class="nav-link text-light playwrite-be-vlg-cursive"
+          >New Post</a
+        >
+      </div>
+    </nav>
+
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-md-8">
+          <% posts.forEach((post, index) => { %>
+          <div class="card mb-4 bg-secondary text-light shadow-lg">
+            <div class="card-body">
+              <div class="mb-2 text-muted arvo-regular-italic">
+                <%= new Date().toLocaleString() %>
+              </div>
+              <h3 class="card-title bona-nova-sc-bold">
+                <a href="/post/<%= index %>" class="text-light"
+                  ><%= post.title %></a
+                >
+              </h3>
+              <p class="card-text arvo-regular"><%= post.content %></p>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+        <div class="col-md-4">
+          <!-- Create Post Button -->
+          <a
+            href="/new"
+            class="btn btn-lg mb-3 w-100 bona-nova-sc-bold"
+            style="background-color: #758694; color: #fff8f3"
+          >
+            Create Post
+          </a>
+
+          <div class="bg-secondary text-light p-3 rounded shadow-sm">
+            <h5 class="bona-nova-sc-bold">Recent Posts</h5>
+            <ul class="list-unstyled">
+              <% posts.forEach((post, index) => { %>
+              <li class="mb-2">
+                <a
+                  href="/post/<%= index %>"
+                  class="text-light arvo-regular chunk"
+                  ><%= post.title %></a
+                >
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+
+          <!-- About This Blog Section -->
+          <div class="bg-secondary text-light p-3 mt-4 rounded shadow-sm">
+            <h5 class="bona-nova-sc-bold">About This Blog</h5>
+            <p class="arvo-regular">
+              Welcome to Innovate & Elevate, your go-to resource for navigating
+              the exciting yet challenging world of college life. Whether you're
+              a freshman finding your footing or a senior preparing for the next
+              chapter, our blog is here to offer support and inspiration. Dive
+              into our curated tips on effective study techniques, stress
+              management, and personal development. Discover stories that
+              resonate with your experiences and empower you to embrace every
+              opportunity. Join us as we explore a journey of growth, learning,
+              and discovery. Together, we'll elevate your college experience to
+              new heights!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FTv3aF+3eD6V9dt3LJr0T4zjFQoqilA4HHjQ27gDazlbB5Pq6AEXgSg5UazmiZo"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

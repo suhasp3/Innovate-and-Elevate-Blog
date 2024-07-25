@@ -1,0 +1,97 @@
+body {
+  background-color: #fff8f3; /* Lightest color */
+  color: #405d72; /* Darkest color for text */
+}
+
+.navbar,
+.footer {
+  background-color: #405d72 !important; /* Darkest color */
+}
+
+.card,
+.bg-secondary {
+  background-color: #758694 !important;
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.card-title a {
+  color: #405d72; /* Dark text color */
+}
+
+.card-text,
+.text-muted,
+.nav-link {
+  color: #f7e7dc; /* Medium color for text */
+}
+
+a {
+  color: #758694; /* Link color */
+}
+
+.post-box:hover {
+  color: #405d72; /* Dark color on hover */
+}
+
+.footer {
+  text-align: center;
+  color: #fff8f3; /* Lightest color for footer text */
+}
+
+.playwrite-be-vlg-cursive {
+  font-family: "Playwrite BE VLG", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bona-nova-sc-regular {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bona-nova-sc-bold {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.bona-nova-sc-regular-italic {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.arvo-regular {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.chunk {
+  color: #fff8f3;
+}
+
+.arvo-regular-italic {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.5rem; /* Increase brand size */
+}
+
+.navbar .nav-link {
+  font-size: 1.2rem; /* Increase link size */
+}
+
+.navbar .container-fluid {
+  justify-content: flex-start; /* Align items to the left */
+}
